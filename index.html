@@ -80,11 +80,14 @@ body::after{
     height:100%;
     border-radius:50%;
     background:#111525;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:42px;
-    font-weight:bold;
+    overflow:hidden;
+}
+
+.photo-inner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
 h1{
@@ -167,8 +170,6 @@ h1{
 .facebook{
     background:#1877f2;
 }
-
-/* WHATSAPP */
 
 .whatsapp{
     background:#25d366;
@@ -290,7 +291,10 @@ footer{
 
         <div class="photo">
             <div class="photo-inner">
-                AH
+
+                <!-- YOUR PHOTO -->
+                <img src="profile.jpg" alt="Abdul Hadi">
+
             </div>
         </div>
 
@@ -311,7 +315,6 @@ footer{
     <!-- SOCIAL MEDIA -->
 
     <div class="socials">
-
 
         <!-- INSTAGRAM -->
 
@@ -401,7 +404,7 @@ footer{
 
             <div class="details">
                 <div class="name">Facebook</div>
-                <div class="id">iamhadi130</div>
+                <div class="id">@iamhadi130</div>
             </div>
 
             <div class="arrow">›</div>
@@ -486,4 +489,4 @@ footer{
 </div>
 
 </body>
-    </html>
+</html>
