@@ -34,6 +34,7 @@ body::before{
     opacity:.45;
     top:-120px;
     left:-100px;
+    z-index:-1;
 }
 
 body::after{
@@ -46,6 +47,7 @@ body::after{
     opacity:.35;
     right:-120px;
     bottom:-100px;
+    z-index:-1;
 }
 
 .container{
@@ -116,14 +118,11 @@ h1{
     align-items:center;
     text-decoration:none;
     color:white;
-
     padding:15px;
     margin:13px 0;
-
     background:rgba(255,255,255,.055);
     border:1px solid rgba(255,255,255,.10);
     border-radius:20px;
-
     transition:.3s;
 }
 
@@ -137,11 +136,9 @@ h1{
     width:48px;
     height:48px;
     border-radius:15px;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     flex-shrink:0;
 }
 
@@ -171,6 +168,12 @@ h1{
     background:#1877f2;
 }
 
+/* WHATSAPP */
+
+.whatsapp{
+    background:#25d366;
+}
+
 .details{
     margin-left:15px;
 }
@@ -197,7 +200,6 @@ h1{
 .about{
     margin-top:35px;
     padding:23px;
-
     background:rgba(255,255,255,.045);
     border:1px solid rgba(255,255,255,.09);
     border-radius:22px;
@@ -277,7 +279,6 @@ footer{
 
 </style>
 </head>
-
 
 <body>
 
@@ -407,6 +408,30 @@ footer{
 
         </a>
 
+
+        <!-- WHATSAPP -->
+
+        <a class="social"
+           href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20I%20visited%20your%20website."
+           target="_blank">
+
+            <div class="icon whatsapp">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 0 0-8.7 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 6.9 12.1 8 8 0 0 1-10 3.1l-.4-.2-3 .8.8-3-.2-.4A8 8 0 1 1 12 4zm-3 3.5c-.3 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.1 3.1 1.3 3.3c.2.2 2.2 3.5 5.5 4.7 2.7 1 3.3.8 3.9.7.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.7-.5H9z"/>
+                </svg>
+
+            </div>
+
+            <div class="details">
+                <div class="name">WhatsApp</div>
+                <div class="id">+92 321 7044963</div>
+            </div>
+
+            <div class="arrow">›</div>
+
+        </a>
+
     </div>
 
 
@@ -448,7 +473,7 @@ footer{
 
         <div class="box">
             <div class="label">Social Media</div>
-            <div class="value">4 Accounts</div>
+            <div class="value">5 Accounts</div>
         </div>
 
     </div>
@@ -461,228 +486,4 @@ footer{
 </div>
 
 </body>
-    </html>    background:#6d28d9;
-    filter:blur(110px);
-    opacity:.35;
-    top:-80px;
-    left:-80px;
-    z-index:-1;
-}
-
-body::after{
-    content:"";
-    position:fixed;
-    width:280px;
-    height:280px;
-    background:#06b6d4;
-    filter:blur(110px);
-    opacity:.25;
-    bottom:-80px;
-    right:-80px;
-    z-index:-1;
-}
-
-.container{
-    width:92%;
-    max-width:650px;
-    margin:auto;
-    padding:45px 0;
-}
-
-/* PROFILE */
-
-.profile{
-    text-align:center;
-}
-
-.profile-photo{
-    width:140px;
-    height:140px;
-    margin:auto;
-    border-radius:50%;
-    padding:4px;
-    background:linear-gradient(135deg,#8b5cf6,#06b6d4,#ec4899);
-    box-shadow:0 0 45px rgba(139,92,246,.45);
-}
-
-.profile-inner{
-    width:100%;
-    height:100%;
-    border-radius:50%;
-    background:linear-gradient(145deg,#151a32,#242a4d);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:45px;
-    font-weight:800;
-}
-
-h1{
-    margin-top:18px;
-    font-size:32px;
-    font-weight:800;
-}
-
-.verified{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:20px;
-    height:20px;
-    margin-left:5px;
-    border-radius:50%;
-    background:#3b82f6;
-    font-size:12px;
-}
-
-.username{
-    margin-top:5px;
-    color:#aeb7d1;
-    font-size:14px;
-}
-
-.bio{
-    margin:16px auto 0;
-    max-width:520px;
-    color:#d5d9e8;
-    line-height:1.7;
-    font-size:14px;
-}
-
-/* BUTTONS */
-
-.socials{
-    margin-top:32px;
-}
-
-.social{
-    display:flex;
-    align-items:center;
-    text-decoration:none;
-    color:#fff;
-
-    padding:15px 17px;
-    margin:13px 0;
-
-    border:1px solid rgba(255,255,255,.10);
-    border-radius:18px;
-
-    background:rgba(255,255,255,.055);
-    backdrop-filter:blur(15px);
-
-    transition:.25s;
-}
-
-.social:hover{
-    transform:translateY(-4px);
-    background:rgba(255,255,255,.11);
-    border-color:rgba(255,255,255,.25);
-}
-
-.icon{
-    width:45px;
-    height:45px;
-    border-radius:14px;
-
-    display:flex;
-    align-items:center;
-       justify-content: center;
-    font-size: 42px;
-    font-weight: bold;
-    box-shadow: 0 10px 30px #0008;
-}
-
-h1 {
-    margin-top: 20px;
-    font-size: 40px;
-}
-
-.subtitle {
-    margin-top: 8px;
-    color: #d1d5db;
-    font-size: 18px;
-}
-
-.about {
-    margin-top: 30px;
-    padding: 22px;
-    border-radius: 20px;
-    background: #ffffff18;
-    border: 1px solid #ffffff30;
-}
-
-.about p {
-    margin: 10px;
-}
-
-.links {
-    margin-top: 20px;
-}
-
-.links a {
-    display: block;
-    margin: 12px 0;
-    padding: 16px;
-    border-radius: 15px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    background: #ffffff18;
-    border: 1px solid #ffffff30;
-}
-
-.links a:hover {
-    background: #ffffff35;
-}
-
-footer {
-    margin-top: 30px;
-    color: #cbd5e1;
-    font-size: 13px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <div class="profile">AH</div>
-
-    <h1>Abdul Hadi</h1>
-
-    <p class="subtitle">
-        Student • Lahore, Pakistan
-    </p>
-
-    <div class="about">
-        <p>👋 Welcome to my personal website!</p>
-        <p>🎓 Student</p>
-        <p>📍 Lahore, Pakistan</p>
-        <p>✨ Mehar Arain</p>
-    </div>
-
-    <div class="links">
-
-        <a href="https://instagram.com/iamhadi130" target="_blank">
-            📸 Instagram — @iamhadi130
-        </a>
-
-        <a href="https://facebook.com/iamhadi130" target="_blank">
-            📘 Facebook — @iamhadi130
-        </a>
-
-        <a href="https://www.snapchat.com/" target="_blank">
-            👻 Snapchat — @iamhadi130
-        </a>
-
-    </div>
-
-    <footer>
-        © 2026 Abdul Hadi
-    </footer>
-
-</div>
-
-</body>
-  </html>
+    </html>
