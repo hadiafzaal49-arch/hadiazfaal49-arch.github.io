@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Abdul Hadi | Official Profile</title>
+<title>Abdul Hadi</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 *{
     margin:0;
@@ -15,15 +14,11 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:'Poppins',sans-serif;
+    font-family:Arial, sans-serif;
     min-height:100vh;
-    color:#fff;
-    background:#070914;
+    color:white;
+    background:#080b16;
     overflow-x:hidden;
 }
 
@@ -32,9 +27,441 @@ body{
 body::before{
     content:"";
     position:fixed;
-    width:280px;
-    height:280px;
+    width:350px;
+    height:350px;
     background:#6d28d9;
+    filter:blur(130px);
+    opacity:.45;
+    top:-120px;
+    left:-100px;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:350px;
+    height:350px;
+    background:#0891b2;
+    filter:blur(130px);
+    opacity:.35;
+    right:-120px;
+    bottom:-100px;
+}
+
+.container{
+    position:relative;
+    z-index:1;
+    width:92%;
+    max-width:520px;
+    margin:auto;
+    padding:55px 0 25px;
+}
+
+/* PROFILE */
+
+.profile{
+    text-align:center;
+}
+
+.photo{
+    width:125px;
+    height:125px;
+    margin:auto;
+    border-radius:50%;
+    padding:4px;
+    background:linear-gradient(135deg,#a855f7,#22d3ee,#ec4899);
+    box-shadow:0 0 40px rgba(168,85,247,.35);
+}
+
+.photo-inner{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background:#111525;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:42px;
+    font-weight:bold;
+}
+
+h1{
+    margin-top:18px;
+    font-size:31px;
+}
+
+.handle{
+    margin-top:7px;
+    color:#a5acc2;
+    font-size:14px;
+}
+
+.bio{
+    margin:18px auto 0;
+    max-width:400px;
+    color:#c7cada;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* SOCIAL BUTTONS */
+
+.socials{
+    margin-top:35px;
+}
+
+.social{
+    position:relative;
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    color:white;
+
+    padding:15px;
+    margin:13px 0;
+
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:20px;
+
+    transition:.3s;
+}
+
+.social:hover{
+    transform:translateY(-4px);
+    background:rgba(255,255,255,.10);
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+
+.icon{
+    width:48px;
+    height:48px;
+    border-radius:15px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+}
+
+.icon svg{
+    width:25px;
+    height:25px;
+    fill:white;
+}
+
+.instagram{
+    background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+}
+
+.snapchat{
+    background:#fffc00;
+}
+
+.snapchat svg{
+    fill:#111;
+}
+
+.tiktok{
+    background:linear-gradient(135deg,#25f4ee,#000,#fe2c55);
+}
+
+.facebook{
+    background:#1877f2;
+}
+
+.details{
+    margin-left:15px;
+}
+
+.name{
+    font-size:15px;
+    font-weight:bold;
+}
+
+.id{
+    margin-top:4px;
+    color:#9299ae;
+    font-size:12px;
+}
+
+.arrow{
+    margin-left:auto;
+    font-size:27px;
+    color:#777f96;
+}
+
+/* ABOUT */
+
+.about{
+    margin-top:35px;
+    padding:23px;
+
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:22px;
+}
+
+.about-title{
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.about-text{
+    color:#bfc5d8;
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* INFO */
+
+.info{
+    margin-top:15px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.box{
+    padding:18px;
+    border-radius:18px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.label{
+    color:#747d96;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.value{
+    margin-top:7px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    margin-top:35px;
+    color:#606980;
+    font-size:11px;
+}
+
+/* MOBILE */
+
+@media(max-width:450px){
+
+    .container{
+        padding:42px 0 20px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .photo{
+        width:115px;
+        height:115px;
+    }
+
+    .info{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <!-- PROFILE -->
+
+    <div class="profile">
+
+        <div class="photo">
+            <div class="photo-inner">
+                AH
+            </div>
+        </div>
+
+        <h1>Abdul Hadi</h1>
+
+        <div class="handle">
+            @iamhadi130
+        </div>
+
+        <p class="bio">
+            Welcome to my personal space.
+            Find me on social media and stay connected.
+        </p>
+
+    </div>
+
+
+    <!-- SOCIAL MEDIA -->
+
+    <div class="socials">
+
+
+        <!-- INSTAGRAM -->
+
+        <a class="social"
+           href="https://instagram.com/iamhadi130"
+           target="_blank">
+
+            <div class="icon instagram">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 12 14.5 2.5 2.5 0 0 0 12 9.5zM17.5 6.5A1 1 0 1 1 17.5 8.5 1 1 0 0 1 17.5 6.5z"/>
+                </svg>
+
+            </div>
+
+            <div class="details">
+                <div class="name">Instagram</div>
+                <div class="id">@iamhadi130</div>
+            </div>
+
+            <div class="arrow">›</div>
+
+        </a>
+
+
+        <!-- SNAPCHAT -->
+
+        <a class="social"
+           href="https://www.snapchat.com/add/iamhadi130"
+           target="_blank">
+
+            <div class="icon snapchat">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2c-3.2 0-5.4 2.2-5.4 5.5v1.1c0 .5-.2.8-.7 1.1-.4.2-1 .4-1 .9 0 .6.8.8 1.4 1 .5.2.8.4.8.8 0 .8-1.1 1.1-1.4 1.2-.4.1-.7.4-.6.8.1.5.7.6 1.2.6.8 0 1.4.3 1.7.8.4.7 1.2 1.4 2.2 1.7.6.2 1 .4 1.1.8.1.4-.3.7-.8.9-.5.2-1 .3-1.3.3-.4 0-.7.2-.7.6 0 .4.5.5 1 .6.6.1 1.3.1 1.8.5.7.5 1.3.8 2.7.8s2-.3 2.7-.8c.5-.4 1.2-.4 1.8-.5.5-.1 1-.2 1-.6 0-.4-.3-.6-.7-.6-.3 0-.8-.1-1.3-.3-.5-.2-.9-.5-.8-.9.1-.4.5-.6 1.1-.8 1-.3 1.8-1 2.2-1.7.3-.5.9-.8 1.7-.8.5 0 1.1-.1 1.2-.6.1-.4-.2-.7-.6-.8-.3-.1-1.4-.4-1.4-1.2 0-.4.3-.6.8-.8.6-.2 1.4-.4 1.4-1 0-.5-.6-.7-1-.9-.5-.3-.7-.6-.7-1.1V7.5C17.4 4.2 15.2 2 12 2z"/>
+                </svg>
+
+            </div>
+
+            <div class="details">
+                <div class="name">Snapchat</div>
+                <div class="id">@iamhadi130</div>
+            </div>
+
+            <div class="arrow">›</div>
+
+        </a>
+
+
+        <!-- TIKTOK -->
+
+        <a class="social"
+           href="https://www.tiktok.com/@abdul_hadi_654"
+           target="_blank">
+
+            <div class="icon tiktok">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M15 2h3c.2 1.7 1.1 3.1 3 3.7v3.1c-1.2-.1-2.3-.5-3.2-1.1V15c0 4-2.7 6.5-6.4 6.5-3.2 0-5.6-2.2-5.6-5.4 0-3.4 2.6-5.7 6.2-5.7.4 0 .8 0 1.1.1v3.2c-.4-.1-.7-.2-1.1-.2-1.7 0-2.9 1-2.9 2.5 0 1.4 1 2.4 2.4 2.4 1.6 0 2.6-1 2.6-3.1V2h1z"/>
+                </svg>
+
+            </div>
+
+            <div class="details">
+                <div class="name">TikTok</div>
+                <div class="id">@abdul_hadi_654</div>
+            </div>
+
+            <div class="arrow">›</div>
+
+        </a>
+
+
+        <!-- FACEBOOK -->
+
+        <a class="social"
+           href="https://www.facebook.com/iamhadi130"
+           target="_blank">
+
+            <div class="icon facebook">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V4c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2V10H7.5v3h2.8v8h3.2z"/>
+                </svg>
+
+            </div>
+
+            <div class="details">
+                <div class="name">Facebook</div>
+                <div class="id">iamhadi130</div>
+            </div>
+
+            <div class="arrow">›</div>
+
+        </a>
+
+    </div>
+
+
+    <!-- ABOUT -->
+
+    <div class="about">
+
+        <div class="about-title">
+            About Me
+        </div>
+
+        <div class="about-text">
+            Hi! I'm Abdul Hadi.
+            This is my personal website where you can
+            easily find all my social media profiles.
+        </div>
+
+    </div>
+
+
+    <!-- INFO -->
+
+    <div class="info">
+
+        <div class="box">
+            <div class="label">Name</div>
+            <div class="value">Abdul Hadi</div>
+        </div>
+
+        <div class="box">
+            <div class="label">Username</div>
+            <div class="value">@iamhadi130</div>
+        </div>
+
+        <div class="box">
+            <div class="label">Country</div>
+            <div class="value">Pakistan 🇵🇰</div>
+        </div>
+
+        <div class="box">
+            <div class="label">Social Media</div>
+            <div class="value">4 Accounts</div>
+        </div>
+
+    </div>
+
+
+    <footer>
+        © 2026 Abdul Hadi
+    </footer>
+
+</div>
+
+</body>
+    </html>    background:#6d28d9;
     filter:blur(110px);
     opacity:.35;
     top:-80px;
