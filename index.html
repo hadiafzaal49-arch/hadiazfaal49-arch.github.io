@@ -15,7 +15,7 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     min-height:100vh;
     color:white;
     background:#080b16;
@@ -25,91 +25,90 @@ body{
 body::before{
     content:"";
     position:fixed;
-    width:350px;
-    height:350px;
-    background:#6d28d9;
-    filter:blur(130px);
-    opacity:.45;
+    width:300px;
+    height:300px;
     top:-120px;
     left:-100px;
+    background:#6d28d9;
+    filter:blur(100px);
+    opacity:.35;
     z-index:-1;
 }
 
 body::after{
     content:"";
     position:fixed;
-    width:350px;
-    height:350px;
+    width:300px;
+    height:300px;
+    right:-100px;
+    bottom:-120px;
     background:#0891b2;
-    filter:blur(130px);
-    opacity:.35;
-    right:-120px;
-    bottom:-100px;
+    filter:blur(100px);
+    opacity:.30;
     z-index:-1;
 }
 
 .container{
-    position:relative;
-    z-index:1;
     width:92%;
     max-width:520px;
     margin:auto;
     padding:55px 0 25px;
 }
 
+/* PROFILE */
+
 .profile{
     text-align:center;
 }
 
-.photo{
+.profile-circle{
     width:125px;
     height:125px;
     margin:auto;
-    border-radius:50%;
     padding:4px;
+    border-radius:50%;
     background:linear-gradient(135deg,#a855f7,#22d3ee,#ec4899);
-    box-shadow:0 0 40px rgba(168,85,247,.35);
+    box-shadow:0 0 35px rgba(168,85,247,.35);
 }
 
-.photo-inner{
+.profile-inner{
     width:100%;
     height:100%;
     border-radius:50%;
-    background:#111525;
+    background:#080b16;
     display:flex;
     align-items:center;
     justify-content:center;
-    overflow:hidden;
 }
 
-.initials{
-    font-size:42px;
+.profile-inner span{
+    font-size:38px;
     font-weight:bold;
-    letter-spacing:2px;
     background:linear-gradient(135deg,#c084fc,#22d3ee,#f472b6);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
-    background-clip:text;
 }
 
 h1{
     margin-top:18px;
-    font-size:31px;
+    font-size:27px;
 }
 
 .handle{
-    margin-top:7px;
-    color:#a5acc2;
+    color:#9299ae;
+    margin-top:6px;
     font-size:14px;
 }
 
 .bio{
-    margin:18px auto 0;
-    max-width:420px;
-    color:#c7cada;
-    font-size:14px;
-    line-height:1.7;
+    color:#aeb4c7;
+    font-size:13px;
+    line-height:1.6;
+    margin:15px auto 0;
+    max-width:450px;
 }
+
+/* SOCIALS */
 
 .socials{
     margin-top:35px;
@@ -200,259 +199,439 @@ h1{
     color:#777f96;
 }
 
+/* GAMES */
 
-/* SERVICES */
-
-.services{
-    margin-top:35px;
+.games{
+    margin-top:38px;
 }
 
-.services-title{
-    font-size:20px;
+.games-title{
+    font-size:21px;
     font-weight:bold;
     margin-bottom:15px;
 }
 
-.service{
+.games-subtitle{
+    color:#858ca1;
+    font-size:12px;
+    margin-top:-7px;
+    margin-bottom:18px;
+}
+
+.games-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.game-card{
+    min-height:88px;
+    padding:12px 10px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.10);
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.075),
+        rgba(255,255,255,.025)
+    );
+    cursor:pointer;
+    transition:.28s;
     display:flex;
     align-items:center;
-    text-decoration:none;
-    color:white;
-    padding:15px;
-    margin:12px 0;
-    background:rgba(255,255,255,.045);
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:20px;
-    transition:.3s;
+    gap:8px;
 }
 
-.service:hover{
+.game-card:hover{
     transform:translateY(-4px);
-    background:rgba(255,255,255,.085);
-    box-shadow:0 12px 30px rgba(0,0,0,.25);
+    border-color:rgba(168,85,247,.45);
+    box-shadow:0 12px 28px rgba(0,0,0,.25);
 }
 
-.service-icon{
-    width:48px;
-    height:48px;
-    border-radius:15px;
+.game-icon{
+    width:39px;
+    height:39px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#6d28d9,#0891b2);
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:23px;
+    font-size:19px;
     flex-shrink:0;
 }
 
-.design{
-    background:linear-gradient(135deg,#8b5cf6,#ec4899);
-}
-
-.documents{
-    background:linear-gradient(135deg,#2563eb,#06b6d4);
-}
-
-.cnic{
-    background:linear-gradient(135deg,#059669,#14b8a6);
-}
-
-.photo-edit{
-    background:linear-gradient(135deg,#f97316,#ef4444);
-}
-
-.web{
-    background:linear-gradient(135deg,#0891b2,#6366f1);
-}
-
-.forms{
-    background:linear-gradient(135deg,#14b8a6,#0ea5e9);
-}
-
-.typing{
-    background:linear-gradient(135deg,#64748b,#475569);
-}
-
-.pdf{
-    background:linear-gradient(135deg,#ef4444,#f97316);
-}
-
-.excel{
-    background:linear-gradient(135deg,#16a34a,#059669);
-}
-
-.print{
-    background:linear-gradient(135deg,#334155,#64748b);
-}
-
-.poster{
-    background:linear-gradient(135deg,#ec4899,#f43f5e);
-}
-
-.qr{
-    background:linear-gradient(135deg,#111827,#4b5563);
-}
-
-.email-help{
-    background:linear-gradient(135deg,#4f46e5,#7c3aed);
-}
-
-.bise{
-    background:linear-gradient(135deg,#2563eb,#14b8a6);
-}
-
-.result{
-    background:linear-gradient(135deg,#0ea5e9,#6366f1);
-}
-
-/* NEW SERVICES */
-
-.mobile{
-    background:linear-gradient(135deg,#7c3aed,#2563eb);
-}
-
-.mobile-settings{
-    background:linear-gradient(135deg,#6366f1,#06b6d4);
-}
-
-.router{
-    background:linear-gradient(135deg,#0891b2,#2563eb);
-}
-
-.internet{
-    background:linear-gradient(135deg,#0ea5e9,#14b8a6);
-}
-
-.electric{
-    background:linear-gradient(135deg,#f59e0b,#ef4444);
-}
-
-.gas{
-    background:linear-gradient(135deg,#f97316,#dc2626);
-}
-
-.water{
-    background:linear-gradient(135deg,#0284c7,#06b6d4);
-}
-
-.solar{
-    background:linear-gradient(135deg,#f59e0b,#eab308);
-}
-
-.ups{
-    background:linear-gradient(135deg,#4f46e5,#7c3aed);
-}
-
-.wiring{
-    background:linear-gradient(135deg,#475569,#f59e0b);
-}
-
-.security{
-    background:linear-gradient(135deg,#059669,#0d9488);
-}
-
-.tech{
-    background:linear-gradient(135deg,#7c3aed,#ec4899);
-}
-
-.service-details{
-    margin-left:15px;
+.game-info{
     min-width:0;
 }
 
-.service-name{
-    font-size:15px;
+.game-name{
+    font-size:11px;
     font-weight:bold;
+    line-height:1.3;
 }
 
-.service-text{
+.game-small{
+    color:#858ca1;
+    font-size:9px;
     margin-top:4px;
-    color:#9299ae;
-    font-size:12px;
-    line-height:1.4;
 }
 
-.service-arrow{
+.game-arrow{
     margin-left:auto;
-    font-size:27px;
     color:#777f96;
-    padding-left:8px;
+    font-size:18px;
 }
 
+/* SERVICES */
+
+.services{
+    margin-top:38px;
+}
+
+.services-title{
+    font-size:21px;
+    font-weight:bold;
+    margin-bottom:13px;
+}
+
+.search{
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:22px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.055);
+    color:white;
+    outline:none;
+    font-size:13px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.search::placeholder{
+    color:#777f96;
+}
+
+.section{
+    margin-bottom:27px;
+}
+
+.section-title{
+    font-size:14px;
+    font-weight:bold;
+    padding:10px 12px;
+    margin-bottom:11px;
+    border-left:3px solid #a855f7;
+    background:linear-gradient(
+        90deg,
+        rgba(168,85,247,.13),
+        transparent
+    );
+    border-radius:7px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.service{
+    min-height:76px;
+    padding:10px;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
+    );
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:17px;
+    cursor:pointer;
+    transition:.28s;
+}
+
+.service:hover{
+    transform:translateY(-3px);
+    border-color:rgba(168,85,247,.45);
+    box-shadow:0 10px 25px rgba(0,0,0,.22);
+}
+
+.si{
+    width:37px;
+    height:37px;
+    border-radius:11px;
+    background:linear-gradient(135deg,#6d28d9,#0891b2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:17px;
+    flex-shrink:0;
+}
+
+.sd{
+    min-width:0;
+}
+
+.sn{
+    font-size:10px;
+    font-weight:bold;
+    line-height:1.35;
+}
+
+.st{
+    color:#777f96;
+    font-size:8px;
+    margin-top:4px;
+}
+
+.sa{
+    margin-left:auto;
+    color:#777f96;
+    font-size:17px;
+}
+
+/* MODALS */
+
+.solution{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.72);
+    backdrop-filter:blur(8px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:18px;
+    z-index:1000;
+}
+
+.solution.show{
+    display:flex;
+}
+
+.solution-box{
+    width:100%;
+    max-width:420px;
+    max-height:90vh;
+    overflow:auto;
+    background:#101522;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:25px;
+    padding:22px;
+    box-shadow:0 25px 80px rgba(0,0,0,.55);
+}
+
+.sol-icon{
+    width:55px;
+    height:55px;
+    border-radius:17px;
+    background:linear-gradient(135deg,#6d28d9,#0891b2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    margin-bottom:13px;
+}
+
+.solution-box h2{
+    font-size:20px;
+}
+
+.solution-box p{
+    color:#aeb4c7;
+    font-size:13px;
+    line-height:1.6;
+    margin-top:9px;
+}
+
+.sol-steps{
+    margin-top:15px;
+    color:#d7dbea;
+    font-size:12px;
+    line-height:1.8;
+}
+
+.wa-btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    background:#25d366;
+    padding:13px;
+    border-radius:14px;
+    margin-top:18px;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.close-btn{
+    width:100%;
+    border:0;
+    padding:12px;
+    margin-top:9px;
+    border-radius:14px;
+    background:rgba(255,255,255,.08);
+    color:white;
+    cursor:pointer;
+}
+
+/* GAME */
+
+.game-modal-box{
+    text-align:center;
+}
+
+.game-modal-title{
+    font-size:21px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.game-result{
+    min-height:28px;
+    color:#bfc5d8;
+    font-size:13px;
+    margin:12px 0;
+}
+
+.game-btn{
+    border:1px solid rgba(255,255,255,.12);
+    background:linear-gradient(135deg,#6d28d9,#0891b2);
+    color:white;
+    border-radius:13px;
+    padding:11px 15px;
+    cursor:pointer;
+    font-weight:bold;
+    margin:4px;
+}
+
+.game-input{
+    width:100%;
+    padding:12px;
+    border-radius:13px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.06);
+    color:white;
+    outline:none;
+    text-align:center;
+    margin:8px 0;
+}
+
+.ttt{
+    display:grid;
+    grid-template-columns:repeat(3,65px);
+    gap:7px;
+    justify-content:center;
+    margin:15px auto;
+}
+
+.ttt-cell{
+    width:65px;
+    height:65px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.06);
+    border-radius:13px;
+    color:white;
+    font-size:25px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.memory{
+    display:grid;
+    grid-template-columns:repeat(4,55px);
+    gap:7px;
+    justify-content:center;
+    margin:15px auto;
+}
+
+.memory-card{
+    width:55px;
+    height:55px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.12);
+    background:#171d2d;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.tap-area{
+    width:170px;
+    height:170px;
+    margin:15px auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#6d28d9,#0891b2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    font-weight:bold;
+    cursor:pointer;
+    user-select:none;
+}
+
+.reaction-box{
+    height:130px;
+    border-radius:20px;
+    background:#171d2d;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:15px;
+    margin:15px 0;
+    cursor:pointer;
+}
 
 /* ABOUT */
 
 .about{
-    margin-top:35px;
-    padding:23px;
-    background:rgba(255,255,255,.045);
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:22px;
-}
-
-.about-title{
-    font-size:18px;
-    font-weight:bold;
-    margin-bottom:12px;
-}
-
-.about-text{
-    color:#bfc5d8;
-    font-size:14px;
-    line-height:1.8;
-}
-
-.info{
-    margin-top:15px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-}
-
-.box{
-    padding:18px;
-    border-radius:18px;
+    margin-top:40px;
+    padding:20px;
+    border-radius:20px;
     background:rgba(255,255,255,.045);
     border:1px solid rgba(255,255,255,.08);
 }
 
-.label{
-    color:#747d96;
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:1px;
+.about h2{
+    font-size:20px;
+    margin-bottom:10px;
 }
 
-.value{
-    margin-top:7px;
-    font-size:14px;
-    font-weight:bold;
+.about p{
+    color:#aeb4c7;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+    margin-top:15px;
+}
+
+.info div{
+    padding:12px;
+    background:rgba(255,255,255,.05);
+    border-radius:13px;
+    color:#aeb4c7;
+    font-size:11px;
+}
+
+.info b{
+    display:block;
+    color:white;
+    margin-bottom:4px;
 }
 
 footer{
     text-align:center;
-    margin-top:35px;
-    color:#606980;
+    color:#777f96;
     font-size:11px;
     line-height:1.8;
-}
-
-@media(max-width:450px){
-
-    .container{
-        padding:42px 0 20px;
-    }
-
-    h1{
-        font-size:28px;
-    }
-
-    .photo{
-        width:115px;
-        height:115px;
-    }
-
-    .info{
-        grid-template-columns:1fr;
-    }
+    margin-top:28px;
+    padding-bottom:15px;
 }
 
 </style>
@@ -462,575 +641,1872 @@ footer{
 
 <div class="container">
 
-    <!-- PROFILE -->
+<!-- PROFILE -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="photo">
-            <div class="photo-inner">
-                <span class="initials">AH</span>
-            </div>
+    <div class="profile-circle">
+        <div class="profile-inner">
+            <span>AH</span>
         </div>
-
-        <h1>Abdul Hadi</h1>
-
-        <div class="handle">
-            @iamhadi130
-        </div>
-
-        <p class="bio">
-            Mobile, Internet, Router, Online Services,
-            Solar, UPS & Technology Guidance.
-            Need help? Contact me on WhatsApp.
-        </p>
-
     </div>
 
+    <h1>Abdul Hadi</h1>
 
-    <!-- SOCIAL MEDIA -->
+    <div class="handle">@iamhadi130</div>
 
-    <div class="socials">
+    <p class="bio">
+        Mobile, Internet, Router, Online Services, Solar, UPS &
+        Technology Guidance. Need help? Contact me on WhatsApp.
+    </p>
 
-        <a class="social"
-           href="https://instagram.com/iamhadi130"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <div class="icon instagram">
-                <svg viewBox="0 0 24 24">
-                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 12 14.5 2.5 2.5 0 0 0 12 9.5zM17.5 6.5A1 1 0 1 1 17.5 8.5 1 1 0 0 1 17.5 6.5z"/>
-                </svg>
-            </div>
-
-            <div class="details">
-                <div class="name">Instagram</div>
-                <div class="id">@iamhadi130</div>
-            </div>
-
-            <div class="arrow">›</div>
-
-        </a>
+</div>
 
 
-        <a class="social"
-           href="https://www.snapchat.com/add/iamhadi130"
-           target="_blank"
-           rel="noopener noreferrer">
+<!-- SOCIAL LINKS -->
 
-            <div class="icon snapchat">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2c-3.2 0-5.4 2.2-5.4 5.5v1.1c0 .5-.2.8-.7 1.1-.4.2-1 .4-1 .9 0 .6.8.8 1.4 1 .5.2.8.4.8.8 0 .8-1.1 1.1-1.4 1.2-.4.1-.7.4-.6.8.1.5.7.6 1.2.6.8 0 1.4.3 1.7.8.4.7 1.2 1.4 2.2 1.7.6.2 1 .4 1.1.8.1.4-.3.7-.8.9-.5.2-1 .3-1.3.3-.4 0-.7.2-.7.6 0 .4.5.5 1 .6.6.1 1.3.1 1.8.5.7.5 1.3.8 2.7.8s2-.3 2.7-.8c.5-.4 1.2-.4 1.8-.5.5-.1 1-.2 1-.6 0-.4-.3-.6-.7-.6-.3 0-.8-.1-1.3-.3-.5-.2-.9-.5-.8-.9.1-.4.5-.6 1.1-.8 1-.3 1.8-1 2.2-1.7.3-.5.9-.8 1.7-.8.5 0 1.1-.1 1.2-.6.1-.4-.2-.7-.6-.8-.3-.1-1.4-.4-1.4-1.2 0-.4.3-.6.8-.8.6-.2 1.4-.4 1.4-1 0-.5-.6-.7-1-.9-.5-.3-.7-.6-.7-1.1V7.5C17.4 4.2 15.2 2 12 2z"/>
-                </svg>
-            </div>
+<div class="socials">
 
-            <div class="details">
-                <div class="name">Snapchat</div>
-                <div class="id">@iamhadi130</div>
-            </div>
+<a class="social"
+href="https://instagram.com/iamhadi130"
+target="_blank">
 
-            <div class="arrow">›</div>
-
-        </a>
-
-
-        <a class="social"
-           href="https://www.tiktok.com/@abdul_hadi_654"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <div class="icon tiktok">
-                <svg viewBox="0 0 24 24">
-                    <path d="M15 2h3c.2 1.7 1.1 3.1 3 3.7v3.1c-1.2-.1-2.3-.5-3.2-1.1V15c0 4-2.7 6.5-6.4 6.5-3.2 0-5.6-2.2-5.6-5.4 0-3.4 2.6-5.7 6.2-5.7.4 0 .8 0 1.1.1v3.2c-.4-.1-.7-.2-1.1-.2-1.7 0-2.9 1-2.9 2.5 0 1.4 1 2.4 2.4 2.4 1.6 0 2.6-1 2.6-3.1V2h1z"/>
-                </svg>
-            </div>
-
-            <div class="details">
-                <div class="name">TikTok</div>
-                <div class="id">@abdul_hadi_654</div>
-            </div>
-
-            <div class="arrow">›</div>
-
-        </a>
-
-
-        <a class="social"
-           href="https://www.facebook.com/iamhadi130"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <div class="icon facebook">
-                <svg viewBox="0 0 24 24">
-                    <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V4c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2V10H7.5v3h2.8v8h3.2z"/>
-                </svg>
-            </div>
-
-            <div class="details">
-                <div class="name">Facebook</div>
-                <div class="id">@iamhadi130</div>
-            </div>
-
-            <div class="arrow">›</div>
-
-        </a>
-
-
-        <a class="social"
-           href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20I%20visited%20your%20website."
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <div class="icon whatsapp">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2a10 10 0 0 0-8.7 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 6.9 12.1 8 8 0 0 1-10 3.1l-.4-.2-3 .8.8-3-.2-.4A8 8 0 1 1 12 4zm-3 3.5c-.3 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.1 3.1 1.3 3.3c.2.2 2.2 3.5 5.5 4.7 2.7 1 3.3.8 3.9.7.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.7-.5H9z"/>
-                </svg>
-            </div>
-
-            <div class="details">
-                <div class="name">WhatsApp</div>
-                <div class="id">+92 321 7044963</div>
-            </div>
-
-            <div class="arrow">›</div>
-
-        </a>
-
-
-        <a class="social"
-           href="mailto:hadiafzaal49@gmail.com">
-
-            <div class="icon email">
-                <svg viewBox="0 0 24 24">
-                    <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.5l9 5.6 9-5.6V7H3zm18 10V9.8l-8.5 5.3a1 1 0 0 1-1 0L3 9.8V17h18z"/>
-                </svg>
-            </div>
-
-            <div class="details">
-                <div class="name">Email</div>
-                <div class="id">hadiafzaal49@gmail.com</div>
-            </div>
-
-            <div class="arrow">›</div>
-
-        </a>
-
+    <div class="icon instagram">
+        <svg viewBox="0 0 24 24">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 12 14.5 2.5 2.5 0 0 0 12 9.5zM17.5 6.5A1 1 0 1 1 17.5 8.5 1 1 0 0 1 17.5 6.5z"/>
+        </svg>
     </div>
 
-
-    <!-- SERVICES -->
-
-    <div class="services">
-
-        <div class="services-title">
-            My Services
-        </div>
-
-
-        <!-- EXISTING SERVICES -->
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Logo%20%26%20Graphic%20Design%20service%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon design">🎨</div>
-            <div class="service-details">
-                <div class="service-name">Logo & Graphic Design</div>
-                <div class="service-text">Simple and attractive logos, posters and designs.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20CV%20%26%20Documents%20service%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon documents">📄</div>
-            <div class="service-details">
-                <div class="service-name">CV & Documents</div>
-                <div class="service-text">CV, resume, typing and document formatting.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20SIM%20%2F%20ID%20Assistance%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon cnic">🪪</div>
-            <div class="service-details">
-                <div class="service-name">SIM / ID Assistance</div>
-                <div class="service-text">Guidance for official SIM and identity-related processes.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Photo%20Editing%20service%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon photo-edit">🖼️</div>
-            <div class="service-details">
-                <div class="service-name">Photo Editing</div>
-                <div class="service-text">Photo editing, resizing and background work.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Simple%20Website%20banwani%20hai." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon web">🌐</div>
-            <div class="service-details">
-                <div class="service-name">Simple Websites</div>
-                <div class="service-text">Personal pages, portfolios and simple websites.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Online%20Form%20Filling%20service%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon forms">📝</div>
-            <div class="service-details">
-                <div class="service-name">Online Form Filling</div>
-                <div class="service-text">Assistance with online forms and applications.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Typing%20%26%20Data%20Entry%20service%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon typing">⌨️</div>
-            <div class="service-details">
-                <div class="service-name">Typing & Data Entry</div>
-                <div class="service-text">Basic typing, data entry and document work.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20PDF%20%26%20Word%20Conversion%20service%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon pdf">📑</div>
-            <div class="service-details">
-                <div class="service-name">PDF & Word Conversion</div>
-                <div class="service-text">PDF to Word, Word to PDF and basic file formatting.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Basic%20Excel%20Work%20service%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon excel">📊</div>
-            <div class="service-details">
-                <div class="service-name">Basic Excel Work</div>
-                <div class="service-text">Basic spreadsheets, tables and data organization.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Document%20Printing%20Assistance%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon print">🖨️</div>
-            <div class="service-details">
-                <div class="service-name">Document Printing Assistance</div>
-                <div class="service-text">Help preparing documents for printing.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Posters%20%26%20Invitations%20banwani%20hain." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon poster">🎉</div>
-            <div class="service-details">
-                <div class="service-name">Posters & Invitations</div>
-                <div class="service-text">Simple posters, invitations and certificate designs.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20QR%20Code%20Creation%20service%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon qr">🔳</div>
-            <div class="service-details">
-                <div class="service-name">QR Code Creation</div>
-                <div class="service-text">QR codes for websites, contact details and links.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Email%20Assistance%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon email-help">📧</div>
-            <div class="service-details">
-                <div class="service-name">Email Assistance</div>
-                <div class="service-text">Basic email setup and email-related assistance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <!-- BISE LAHORE -->
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20BISE%20Lahore%209th%20Registration%20ke%20bare%20mein%20madad%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon bise">🎓</div>
-            <div class="service-details">
-                <div class="service-name">BISE Lahore 9th Registration</div>
-                <div class="service-text">Assistance with official 9th class registration process.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20BISE%20Lahore%20Board%20Admission%20ke%20bare%20mein%20madad%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon bise">📝</div>
-            <div class="service-details">
-                <div class="service-name">BISE Lahore Board Admission</div>
-                <div class="service-text">Assistance for 9th, 10th, 11th and 12th class admission forms.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20BISE%20Lahore%20Roll%20No.%20Slip%20ke%20bare%20mein%20madad%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon bise">🎫</div>
-            <div class="service-details">
-                <div class="service-name">BISE Lahore Roll No. Slip</div>
-                <div class="service-text">Assistance with checking and obtaining roll number slips.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20BISE%20Lahore%20Online%20Results%20check%20karne%20mein%20madad%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon result">📊</div>
-            <div class="service-details">
-                <div class="service-name">BISE Lahore Online Results</div>
-                <div class="service-text">Assistance with checking BISE Lahore examination results.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <!-- MOBILE SERVICES -->
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Mobile%20Expert%20Help%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon mobile">📱</div>
-            <div class="service-details">
-                <div class="service-name">Mobile Expert Help</div>
-                <div class="service-text">Mobile settings, apps, features and general troubleshooting guidance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Mobile%20Settings%20ki%20help%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon mobile-settings">⚙️</div>
-            <div class="service-details">
-                <div class="service-name">Mobile Settings & Setup</div>
-                <div class="service-text">Android settings, apps, privacy, permissions and device setup guidance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Mobile%20Security%20%26%20Privacy%20Settings%20ki%20help%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon security">🔐</div>
-            <div class="service-details">
-                <div class="service-name">Mobile Security & Privacy</div>
-                <div class="service-text">Security, privacy, app permissions, passwords and account settings guidance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <!-- ROUTER / WIFI -->
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Router%20Configuration%20ki%20help%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon router">📶</div>
-            <div class="service-details">
-                <div class="service-name">Router Configuration</div>
-                <div class="service-text">Router setup, login settings, LAN, DHCP and basic configuration.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Wi-Fi%20Password%20aur%20Name%20Change%20karna%20hai." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon router">🔑</div>
-            <div class="service-details">
-                <div class="service-name">Wi-Fi Password & Name Change</div>
-                <div class="service-text">Wi-Fi password, SSID/name and basic wireless settings guidance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mere%20Internet%20%2F%20Wi-Fi%20mein%20problem%20hai." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon internet">🌐</div>
-            <div class="service-details">
-                <div class="service-name">Internet & Wi-Fi Troubleshooting</div>
-                <div class="service-text">Internet, Wi-Fi connection and basic network problem guidance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <!-- BILLS -->
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Electricity%20Bill%20check%20aur%20print%20karwana%20hai." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon electric">⚡</div>
-            <div class="service-details">
-                <div class="service-name">Electricity Bill</div>
-                <div class="service-text">Electric bill check, download and print assistance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20SNGPL%20Gas%20Bill%20check%20aur%20print%20karwana%20hai." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon gas">🔥</div>
-            <div class="service-details">
-                <div class="service-name">SNGPL Gas Bill</div>
-                <div class="service-text">SNGPL gas bill check, download and print assistance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20WASA%20Water%20Bill%20check%20aur%20print%20karwana%20hai." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon water">💧</div>
-            <div class="service-details">
-                <div class="service-name">WASA Water Bill</div>
-                <div class="service-text">WASA water bill check, download and print assistance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <!-- SOLAR -->
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Solar%20System%20ki%20guidance%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon solar">☀️</div>
-            <div class="service-details">
-                <div class="service-name">Solar System Guidance</div>
-                <div class="service-text">Solar panels, inverter, load management and basic solar guidance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Solar%20Inverter%20Settings%20ki%20help%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon solar">🔆</div>
-            <div class="service-details">
-                <div class="service-name">Solar Inverter Settings</div>
-                <div class="service-text">Inverter settings, charging, load and basic configuration guidance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <!-- UPS -->
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20UPS%20%26%20Battery%20ki%20guidance%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon ups">🔋</div>
-            <div class="service-details">
-                <div class="service-name">UPS & Battery Guidance</div>
-                <div class="service-text">UPS setup, battery charging, backup load and basic settings guidance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Inverter%20Configuration%20ki%20help%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon ups">⚙️</div>
-            <div class="service-details">
-                <div class="service-name">UPS / Inverter Configuration</div>
-                <div class="service-text">Basic inverter settings, load management and troubleshooting guidance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <!-- ELECTRICAL -->
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Basic%20Electrical%20%26%20Wiring%20Guidance%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon wiring">⚡</div>
-            <div class="service-details">
-                <div class="service-name">Basic Electrical & Wiring Guidance</div>
-                <div class="service-text">Basic wiring, switches, sockets, load and electrical setup guidance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20Electrical%20Load%20%26%20Voltage%20ki%20guidance%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon electric">🔌</div>
-            <div class="service-details">
-                <div class="service-name">Electrical Load & Voltage Guidance</div>
-                <div class="service-text">Basic load calculation, voltage/current understanding and troubleshooting guidance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
-
-        <!-- GENERAL TECH -->
-
-        <a class="service" href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20Mujhe%20General%20Technology%20Guidance%20chahiye." target="_blank" rel="noopener noreferrer">
-            <div class="service-icon tech">🧑‍💻</div>
-            <div class="service-details">
-                <div class="service-name">Complete Technology Guidance</div>
-                <div class="service-text">Mobile, Internet, Wi-Fi, Router, Apps, Solar, UPS and general tech guidance.</div>
-            </div>
-            <div class="service-arrow">›</div>
-        </a>
-
+    <div class="details">
+        <div class="name">Instagram</div>
+        <div class="id">@iamhadi130</div>
     </div>
 
+    <div class="arrow">›</div>
 
-    <!-- ABOUT ME -->
+</a>
 
-    <div class="about">
 
-        <div class="about-title">
-            About Me
+<a class="social"
+href="https://www.snapchat.com/add/iamhadi130"
+target="_blank">
+
+    <div class="icon snapchat">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2c-3.2 0-5.4 2.2-5.4 5.5v1.1c0 .5-.2.8-.7 1.1-.4.2-1 .4-1 .9 0 .6.8.8 1.4 1 .5.2.8.4.8.8 0 .8-1.1 1.1-1.4 1.2-.4.1-.7.4-.6.8.1.5.7.6 1.2.6.8 0 1.4.3 1.7.8.4.7 1.2 1.4 2.2 1.7.6.2 1 .4 1.1.8.1.4-.3.7-.8.9-.5.2-1 .3-1.3.3-.4 0-.7.2-.7.6 0 .4.5.5 1 .6.6.1 1.3.1 1.8.5.7.5 1.3.8 2.7.8s2-.3 2.7-.8c.5-.4 1.2-.4 1.8-.5.5-.1 1-.2 1-.6 0-.4-.3-.6-.7-.6-.3 0-.8-.1-1.3-.3-.5-.2-.9-.5-.8-.9.1-.4.5-.6 1.1-.8 1-.3 1.8-1 2.2-1.7.3-.5.9-.8 1.7-.8.5 0 1.1-.1 1.2-.6.1-.4-.2-.7-.6-.8-.3-.1-1.4-.4-1.4-1.2 0-.4.3-.6.8-.8.6-.2 1.4-.4 1.4-1 0-.5-.6-.7-1-.9-.5-.3-.7-.6-.7-1.1V7.5C17.4 4.2 15.2 2 12 2z"/>
+        </svg>
+    </div>
+
+    <div class="details">
+        <div class="name">Snapchat</div>
+        <div class="id">@iamhadi130</div>
+    </div>
+
+    <div class="arrow">›</div>
+
+</a>
+
+
+<a class="social"
+href="https://www.tiktok.com/@abdul_hadi_654"
+target="_blank">
+
+    <div class="icon tiktok">
+        <svg viewBox="0 0 24 24">
+            <path d="M15 2h3c.2 1.7 1.1 3.1 3 3.7v3.1c-1.2-.1-2.3-.5-3.2-1.1V15c0 4-2.7 6.5-6.4 6.5-3.2 0-5.6-2.2-5.6-5.4 0-3.4 2.6-5.7 6.2-5.7.4 0 .8 0 1.1.1v3.2c-.4-.1-.7-.2-1.1-.2-1.7 0-2.9 1-2.9 2.5 0 1.4 1 2.4 2.4 2.4 1.6 0 2.6-1 2.6-3.1V2h1z"/>
+        </svg>
+    </div>
+
+    <div class="details">
+        <div class="name">TikTok</div>
+        <div class="id">@abdul_hadi_654</div>
+    </div>
+
+    <div class="arrow">›</div>
+
+</a>
+
+
+<a class="social"
+href="https://www.facebook.com/iamhadi130"
+target="_blank">
+
+    <div class="icon facebook">
+        <svg viewBox="0 0 24 24">
+            <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V4c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2V10H7.5v3h2.8v8h3.2z"/>
+        </svg>
+    </div>
+
+    <div class="details">
+        <div class="name">Facebook</div>
+        <div class="id">@iamhadi130</div>
+    </div>
+
+    <div class="arrow">›</div>
+
+</a>
+
+
+<a class="social"
+href="https://wa.me/923217044963?text=Assalamualaikum%20Abdul%20Hadi!%20I%20visited%20your%20website."
+target="_blank">
+
+    <div class="icon whatsapp">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 0 0-8.7 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 6.9 12.1 8 8 0 0 1-10 3.1l-.4-.2-3 .8.8-3-.2-.4A8 8 0 1 1 12 4zm-3 3.5c-.3 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.1 3.1 1.3 3.3c.2.2 2.2 3.5 5.5 4.7 2.7 1 3.3.8 3.9.7.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.7-.5H9z"/>
+        </svg>
+    </div>
+
+    <div class="details">
+        <div class="name">WhatsApp</div>
+        <div class="id">Contact Me</div>
+    </div>
+
+    <div class="arrow">›</div>
+
+</a>
+
+
+<a class="social"
+href="mailto:hadiafzaal49@gmail.com">
+
+    <div class="icon email">
+        <svg viewBox="0 0 24 24">
+            <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.5l9 5.6 9-5.6V7H3zm18 10V9.8l-8.5 5.3a1 1 0 0 1-1 0L3 9.8V17h18z"/>
+        </svg>
+    </div>
+
+    <div class="details">
+        <div class="name">Email</div>
+        <div class="id">hadiafzaal49@gmail.com</div>
+    </div>
+
+    <div class="arrow">›</div>
+
+</a>
+
+</div>
+
+
+<!-- GAMES -->
+
+<div class="games">
+
+    <div class="games-title">🎮 Games & Fun</div>
+
+    <div class="games-subtitle">
+        Thori si fun ke liye halki-phulki games 😄
+    </div>
+
+    <div class="games-grid">
+
+        <div class="game-card" onclick="openGame('ttt')">
+            <div class="game-icon">❌⭕</div>
+            <div class="game-info">
+                <div class="game-name">Tic Tac Toe</div>
+                <div class="game-small">X vs O</div>
+            </div>
+            <div class="game-arrow">›</div>
         </div>
 
-        <div class="about-text">
-            Hi! I'm Abdul Hadi.
-            I provide assistance and guidance in mobile settings,
-            internet, Wi-Fi, router configuration, online services,
-            bills, solar, UPS, inverter and general technology.
-            You can contact me for help with your technical needs.
+        <div class="game-card" onclick="openGame('rps')">
+            <div class="game-icon">✂️</div>
+            <div class="game-info">
+                <div class="game-name">Rock Paper Scissors</div>
+                <div class="game-small">Beat computer</div>
+            </div>
+            <div class="game-arrow">›</div>
+        </div>
+
+        <div class="game-card" onclick="openGame('guess')">
+            <div class="game-icon">🎯</div>
+            <div class="game-info">
+                <div class="game-name">Number Guess</div>
+                <div class="game-small">Guess 1–20</div>
+            </div>
+            <div class="game-arrow">›</div>
+        </div>
+
+        <div class="game-card" onclick="openGame('memory')">
+            <div class="game-icon">🧠</div>
+            <div class="game-info">
+                <div class="game-name">Memory Match</div>
+                <div class="game-small">Find pairs</div>
+            </div>
+            <div class="game-arrow">›</div>
+        </div>
+
+        <div class="game-card" onclick="openGame('tap')">
+            <div class="game-icon">👆</div>
+            <div class="game-info">
+                <div class="game-name">Tap Counter</div>
+                <div class="game-small">Tap fast</div>
+            </div>
+            <div class="game-arrow">›</div>
+        </div>
+
+        <div class="game-card" onclick="openGame('math')">
+            <div class="game-icon">🧮</div>
+            <div class="game-info">
+                <div class="game-name">Quick Math</div>
+                <div class="game-small">Test brain</div>
+            </div>
+            <div class="game-arrow">›</div>
+        </div>
+
+        <div class="game-card" onclick="openGame('coin')">
+            <div class="game-icon">🪙</div>
+            <div class="game-info">
+                <div class="game-name">Coin Flip</div>
+                <div class="game-small">Heads or tails</div>
+            </div>
+            <div class="game-arrow">›</div>
+        </div>
+
+        <div class="game-card" onclick="openGame('dice')">
+            <div class="game-icon">🎲</div>
+            <div class="game-info">
+                <div class="game-name">Dice Roll</div>
+                <div class="game-small">Roll 1–6</div>
+            </div>
+            <div class="game-arrow">›</div>
+        </div>
+
+        <div class="game-card" onclick="openGame('reaction')">
+            <div class="game-icon">⚡</div>
+            <div class="game-info">
+                <div class="game-name">Reaction Test</div>
+                <div class="game-small">How fast?</div>
+            </div>
+            <div class="game-arrow">›</div>
+        </div>
+
+        <div class="game-card" onclick="openGame('lucky')">
+            <div class="game-icon">🍀</div>
+            <div class="game-info">
+                <div class="game-name">Lucky Number</div>
+                <div class="game-small">1–100</div>
+            </div>
+            <div class="game-arrow">›</div>
         </div>
 
     </div>
+</div>
 
 
-    <!-- INFORMATION -->
+<!-- SERVICES -->
+
+<div class="services">
+
+    <div class="services-title">🛠️ My Services</div>
+
+    <input
+        class="search"
+        id="search"
+        type="text"
+        placeholder="🔎 Search a service..."
+        oninput="searchServices()"
+    >
+
+    <div id="servicesContainer"></div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<div class="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        I am Abdul Hadi, a student from Lahore, Pakistan.
+        I provide different online, mobile, internet, digital
+        and technology-related services.
+    </p>
 
     <div class="info">
 
-        <div class="box">
-            <div class="label">Name</div>
-            <div class="value">Abdul Hadi</div>
+        <div>
+            <b>📱 Mobile</b>
+            Expert Help
         </div>
 
-        <div class="box">
-            <div class="label">Username</div>
-            <div class="value">@iamhadi130</div>
+        <div>
+            <b>🌐 Internet</b>
+            Router & Wi-Fi
         </div>
 
-        <div class="box">
-            <div class="label">Country</div>
-            <div class="value">Pakistan 🇵🇰</div>
+        <div>
+            <b>☀️ Solar</b>
+            UPS & Tech
         </div>
 
-        <div class="box">
-            <div class="label">Services</div>
-            <div class="value">Tech & Online Help</div>
+        <div>
+            <b>💻 Online</b>
+            Digital Services
         </div>
 
     </div>
 
+</div>
 
-    <!-- FOOTER -->
 
-    <footer>
-        © 2026 Abdul Hadi<br>
-        Thank you for visiting my website! ❤️<br>
-        I truly appreciate your time and support.
-    </footer>
+<footer>
+    Thank you for visiting my website ❤️<br>
+    © Abdul Hadi
+</footer>
 
 </div>
+
+
+<!-- SERVICE POPUP -->
+
+<div class="solution" id="serviceModal">
+
+    <div class="solution-box">
+
+        <div class="sol-icon" id="solIcon">🛠️</div>
+
+        <h2 id="solTitle">Service</h2>
+
+        <p id="solText"></p>
+
+        <div class="sol-steps" id="solSteps"></div>
+
+        <a
+            id="waService"
+            class="wa-btn"
+            target="_blank"
+            href="#"
+        >
+            💬 WhatsApp for Help
+        </a>
+
+        <button
+            class="close-btn"
+            onclick="closeService()"
+        >
+            Close
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- GAME POPUP -->
+
+<div class="solution" id="gameModal">
+
+    <div class="solution-box game-modal-box">
+
+        <div
+            class="sol-icon"
+            id="gameIcon"
+            style="margin-left:auto;margin-right:auto;"
+        >
+            🎮
+        </div>
+
+        <div class="game-modal-title" id="gameTitle">
+            Game
+        </div>
+
+        <div id="gameArea"></div>
+
+        <button
+            class="close-btn"
+            onclick="closeGame()"
+        >
+            Close Game
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* SERVICES */
+
+const categories=[
+
+{
+title:"📱 Mobile & Android",
+icon:"📱",
+items:[
+"Android Settings Help",
+"Phone Setup",
+"App Installation",
+"App Updates",
+"WhatsApp Setup",
+"WhatsApp Backup",
+"WhatsApp Restore",
+"WhatsApp Privacy Settings",
+"WhatsApp Chat Lock",
+"WhatsApp Notifications",
+"Google Account Setup",
+"Gmail Setup",
+"Play Store Help",
+"Phone Storage Cleanup",
+"Phone Speed Optimization",
+"Battery Saving Settings",
+"Mobile Data Settings",
+"Hotspot Setup",
+"Bluetooth Setup",
+"Screen Lock Setup",
+"Fingerprint Setup",
+"Face Unlock Setup",
+"Screenshot Help",
+"Screen Recording",
+"App Permission Settings",
+"Notification Settings",
+"Language Settings",
+"Date & Time Settings",
+"Keyboard Settings",
+"Call Settings",
+"Contact Backup",
+"Contact Transfer",
+"Phone-to-Phone Data Transfer",
+"File Sharing",
+"Nearby Share Help",
+"Google Drive Backup",
+"Google Photos Backup",
+"Mobile Troubleshooting"
+]
+},
+
+{
+title:"🌐 Wi-Fi / Router / Internet",
+icon:"🌐",
+items:[
+"Wi-Fi Password Change",
+"Wi-Fi Name Change",
+"Router Login Help",
+"Router Setup",
+"Router Reset Help",
+"Wi-Fi Security Setup",
+"2.4GHz Wi-Fi Setup",
+"5GHz Wi-Fi Setup",
+"Guest Wi-Fi Setup",
+"Wi-Fi Channel Change",
+"Router IP Settings",
+"DHCP Settings",
+"LAN Settings",
+"WAN Settings",
+"DNS Settings",
+"Internet Connection Setup",
+"Wi-Fi Speed Troubleshooting",
+"Weak Wi-Fi Signal Help",
+"Router Placement Guidance",
+"Wi-Fi Range Improvement",
+"Connected Devices Check",
+"Unknown Device Check",
+"Router Firmware Guidance",
+"PTCL Router Setup",
+"ZTE Router Setup",
+"Fiber Router Setup",
+"GPON Router Help",
+"LAN Cable Setup",
+"Router-to-Router Setup",
+"Access Point Setup",
+"Wi-Fi Repeater Setup",
+"Internet Sharing"
+]
+},
+
+{
+title:"🎓 BISE Lahore",
+icon:"🎓",
+items:[
+"BISE Lahore Registration Help",
+"BISE Lahore Admission Help",
+"BISE Lahore Roll Number Slip",
+"BISE Lahore Online Result",
+"BISE Lahore Result Checking",
+"BISE Lahore 9th Class Help",
+"BISE Lahore 10th Class Help",
+"BISE Lahore 11th Class Help",
+"BISE Lahore 12th Class Help",
+"BISE Lahore Form Filling",
+"BISE Lahore Online Application",
+"BISE Lahore Document Upload",
+"BISE Lahore Fee Voucher Guidance",
+"BISE Lahore Exam Information",
+"BISE Lahore Roll Slip Download",
+"BISE Lahore Result Card Guidance"
+]
+},
+
+{
+title:"📝 Online Forms & Applications",
+icon:"📝",
+items:[
+"Online Form Filling",
+"Admission Form Filling",
+"School Form Filling",
+"College Form Filling",
+"University Form Filling",
+"Job Application Filling",
+"Scholarship Form Help",
+"Online Registration",
+"Document Upload",
+"Online Application Help",
+"Account Registration",
+"Website Registration",
+"Portal Login Help",
+"Captcha Guidance",
+"Form Correction Guidance",
+"Online Verification Help",
+"Application Tracking Help",
+"Fee Voucher Download",
+"Online Appointment Help",
+"General Portal Help"
+]
+},
+
+{
+title:"📄 PDF / Word / Documents",
+icon:"📄",
+items:[
+"PDF Creation",
+"PDF Editing",
+"PDF to Word",
+"Word to PDF",
+"PDF Merge",
+"PDF Split",
+"PDF Compression",
+"PDF Page Delete",
+"PDF Page Rearrange",
+"PDF Printing",
+"PDF Scanning",
+"Scan to PDF",
+"Document Formatting",
+"Word Document Typing",
+"CV Formatting",
+"Application Writing",
+"Document Cleanup",
+"Image to PDF",
+"Text to PDF",
+"PDF File Sharing"
+]
+},
+
+{
+title:"📊 Excel / Data Entry",
+icon:"📊",
+items:[
+"Excel Data Entry",
+"Excel Sheet Creation",
+"Excel Table Formatting",
+"Excel Basic Formulas",
+"Excel Sorting",
+"Excel Filtering",
+"Excel Data Cleanup",
+"Excel Copy Paste",
+"Excel Attendance Sheet",
+"Excel Marks Sheet",
+"Excel List Making",
+"Excel Record Management",
+"Excel Simple Calculations",
+"Data Entry",
+"Online Data Entry",
+"Mobile Data Entry",
+"Text Data Entry",
+"List Preparation",
+"Contact List Making",
+"Basic Spreadsheet Help"
+]
+},
+
+{
+title:"🎨 Graphic / Photo / Poster",
+icon:"🎨",
+items:[
+"Photo Editing",
+"Photo Crop",
+"Photo Resize",
+"Background Removal",
+"Photo Background Change",
+"Photo Enhancement",
+"Brightness Adjustment",
+"Photo Text Addition",
+"Simple Logo Design",
+"Logo Editing",
+"Poster Design",
+"Social Media Post",
+"WhatsApp Status Design",
+"Thumbnail Design",
+"Invitation Design",
+"Simple Banner Design",
+"QR Code Design",
+"Certificate Design",
+"Profile Picture Design",
+"Basic Graphic Design"
+]
+},
+
+{
+title:"🌐 Website / Email / Social Media",
+icon:"🌐",
+items:[
+"Simple Website",
+"Personal Website",
+"GitHub Pages Website",
+"Website Text Update",
+"Website Link Setup",
+"Website Social Links",
+"Website WhatsApp Button",
+"Website Email Button",
+"HTML Basic Help",
+"Website Mobile Design",
+"Website Troubleshooting",
+"Email Account Setup",
+"Gmail Help",
+"Email Signature",
+"Social Media Profile Setup",
+"Instagram Profile Help",
+"Facebook Profile Help",
+"TikTok Profile Help",
+"Social Link Setup",
+"Online Profile Help"
+]
+},
+
+{
+title:"💡 Electricity / SNGPL / WASA",
+icon:"💡",
+items:[
+"Electricity Bill Checking",
+"Electricity Bill Download",
+"Electricity Bill Online Help",
+"LESCO Bill Help",
+"Gas Bill Checking",
+"SNGPL Bill Help",
+"SNGPL Bill Download",
+"Gas Bill Online Help",
+"WASA Bill Help",
+"WASA Bill Download",
+"Water Bill Online Help",
+"Reference Number Help",
+"Consumer Number Guidance",
+"Online Bill Verification",
+"Bill Printing",
+"Bill PDF Saving",
+"Bill Screenshot Help",
+"Online Payment Guidance"
+]
+},
+
+{
+title:"☀️ Solar / Inverter / UPS",
+icon:"☀️",
+items:[
+"Solar Inverter Basic Help",
+"Solar Inverter Settings",
+"Solar Panel Basic Guidance",
+"Solar System Basic Guidance",
+"UPS Setup Guidance",
+"UPS Load Guidance",
+"Battery Basic Guidance",
+"Battery Voltage Checking",
+"Battery Backup Calculation",
+"Inverter Display Help",
+"Inverter Error Guidance",
+"Solar Monitoring Setup",
+"Wi-Fi Solar Monitoring",
+"Solar App Setup",
+"Basic Solar Troubleshooting",
+"UPS Troubleshooting",
+"Power Backup Guidance",
+"Load Calculation",
+"Solar Load Planning",
+"Basic Energy Saving Guidance"
+]
+},
+
+{
+title:"🖨️ Printing / Scanning / Typing",
+icon:"🖨️",
+items:[
+"Document Printing",
+"Color Printing",
+"Black & White Printing",
+"Photo Printing",
+"PDF Printing",
+"Document Scanning",
+"Photo Scanning",
+"Scan to PDF",
+"Typing Work",
+"Urdu Typing",
+"English Typing",
+"Data Typing",
+"Document Copying",
+"Page Arrangement",
+"Print Size Setup",
+"A4 Printing",
+"Document Formatting",
+"File Transfer for Printing",
+"Mobile Printing Help"
+]
+},
+
+{
+title:"📲 SIM / ID / Online Portals",
+icon:"📲",
+items:[
+"SIM Related Online Guidance",
+"SIM Information Guidance",
+"Official SIM Process Guidance",
+"ID Related Online Guidance",
+"Official Identity Portal Guidance",
+"Online Verification Guidance",
+"Portal Registration",
+"Portal Login Help",
+"Document Upload Help",
+"Application Tracking",
+"Online Token Guidance",
+"Official Website Navigation",
+"Account Recovery Guidance",
+"Online Form Guidance"
+]
+},
+
+{
+title:"🔧 Basic Electrical / Wiring",
+icon:"🔧",
+items:[
+"Basic Wiring Guidance",
+"Switch Wiring Guidance",
+"Socket Wiring Guidance",
+"Light Wiring Guidance",
+"Fan Wiring Guidance",
+"Basic Electrical Troubleshooting",
+"Breaker Basic Guidance",
+"Extension Board Guidance",
+"Plug Wiring Guidance",
+"Voltage Checking Guidance",
+"Electrical Safety Guidance",
+"Home Wiring Basic Guidance"
+]
+},
+
+{
+title:"🛠️ General Technology Help",
+icon:"🛠️",
+items:[
+"Mobile Expert Help",
+"Phone Settings Help",
+"Internet Settings Help",
+"Technology Guidance",
+"Online Search Help",
+"File Download Help",
+"File Upload Help",
+"File Sharing Help",
+"QR Code Help",
+"Link Creation Help",
+"Screenshot Help",
+"Screen Recording Help",
+"Google Search Help",
+"Digital Account Help",
+"Basic Computer Guidance",
+"Technology Troubleshooting",
+"Online Work Guidance",
+"General Digital Help"
+]
+}
+
+];
+
+
+const serviceContainer=
+document.getElementById("servicesContainer");
+
+function displayServices(filter=""){
+
+    serviceContainer.innerHTML="";
+
+    categories.forEach(category=>{
+
+        const filtered=category.items.filter(item=>
+            item.toLowerCase().includes(filter.toLowerCase())
+        );
+
+        if(filtered.length===0)return;
+
+        const section=document.createElement("div");
+
+        section.className="section";
+
+        section.innerHTML=`
+
+            <div class="section-title">
+                ${category.title}
+            </div>
+
+            <div class="grid">
+
+                ${filtered.map(item=>`
+
+                    <div
+                        class="service"
+                        onclick="openService('${escapeQuotes(item)}','${category.icon}')"
+                    >
+
+                        <div class="si">
+                            ${category.icon}
+                        </div>
+
+                        <div class="sd">
+
+                            <div class="sn">
+                                ${item}
+                            </div>
+
+                            <div class="st">
+                                Tap for help
+                            </div>
+
+                        </div>
+
+                        <div class="sa">›</div>
+
+                    </div>
+
+                `).join("")}
+
+            </div>
+        `;
+
+        serviceContainer.appendChild(section);
+
+    });
+
+}
+
+function escapeQuotes(text){
+    return text.replace(/'/g,"\\'");
+}
+
+function searchServices(){
+
+    const value=
+        document.getElementById("search").value;
+
+    displayServices(value);
+}
+
+displayServices();
+
+
+/* SERVICE POPUP */
+
+function openService(name,icon){
+
+    document.getElementById("solIcon")
+        .textContent=icon;
+
+    document.getElementById("solTitle")
+        .textContent=name;
+
+    let text="";
+    let steps="";
+
+    const n=name.toLowerCase();
+
+    if(n.includes("wi-fi password")){
+
+        text="Router ke Wi-Fi password ko change karne mein help.";
+
+        steps=
+        "1️⃣ Router login page open karein<br>"+
+        "2️⃣ Wireless / Wi-Fi section open karein<br>"+
+        "3️⃣ New password enter karein<br>"+
+        "4️⃣ Save / Apply karein";
+
+    }
+
+    else if(n.includes("wi-fi name")){
+
+        text="Wi-Fi ka naam (SSID) change karne mein help.";
+
+        steps=
+        "1️⃣ Router login karein<br>"+
+        "2️⃣ Wireless settings open karein<br>"+
+        "3️⃣ SSID change karein<br>"+
+        "4️⃣ Save karein";
+
+    }
+
+    else if(n.includes("app installation")){
+
+        text="Mobile par required application install karne mein help.";
+
+        steps=
+        "Play Store open karein → App search karein → Install press karein.";
+
+    }
+
+    else if(n.includes("whatsapp backup")){
+
+        text="WhatsApp chats ka backup setup karne mein help.";
+
+        steps=
+        "WhatsApp → Settings → Chats → Chat Backup → Backup.";
+
+    }
+
+    else if(n.includes("word to pdf")){
+
+        text="Word document ko PDF mein convert karne mein help.";
+
+        steps=
+        "Document open karein → Share / Export / Save As → PDF select karein.";
+
+    }
+
+    else if(n.includes("pdf to word")){
+
+        text="PDF ko editable Word document mein convert karne mein help.";
+
+        steps=
+        "PDF select karein → conversion karein → Word file save karein → formatting check karein.";
+
+    }
+
+    else if(
+        n.includes("electricity bill") ||
+        n.includes("lesco")
+    ){
+
+        text=
+        "Electricity bill online check/download karne mein help.";
+
+        steps=
+        "Reference / Consumer number ready rakhein → official bill portal open karein → details enter karein.";
+
+    }
+
+    else if(
+        n.includes("sngpl") ||
+        n.includes("gas bill")
+    ){
+
+        text=
+        "Gas bill online check/download karne mein help.";
+
+        steps=
+        "Consumer/reference number ready rakhein → official SNGPL portal use karein → bill check karein.";
+
+    }
+
+    else if(
+        n.includes("wasa") ||
+        n.includes("water bill")
+    ){
+
+        text=
+        "Water bill online check/download karne mein help.";
+
+        steps=
+        "Consumer/reference details enter karein → official WASA portal se bill check karein.";
+
+    }
+
+    else if(
+        n.includes("solar") ||
+        n.includes("inverter") ||
+        n.includes("ups")
+    ){
+
+        text=
+        "Solar, inverter ya UPS ki basic settings aur troubleshooting guidance.";
+
+        steps=
+        "Apne inverter/UPS ka model aur display ki photo WhatsApp par bhej dein. Available information ke mutabiq guide kiya jayega.";
+
+    }
+
+    else if(n.includes("bise lahore")){
+
+        text=
+        "BISE Lahore ke registration, admission, roll number slip aur result related online guidance.";
+
+        steps=
+        "Relevant class aur required documents/details ready rakhein → BISE Lahore portal par process check karein.";
+
+    }
+
+    else if(
+        n.includes("electrical") ||
+        n.includes("wiring")
+    ){
+
+        text=
+        "Basic electrical/wiring guidance. Safety sab se pehle.";
+
+        steps=
+        "⚠️ Mains electricity band kiye baghair wiring par kaam na karein. Zarurat ho to qualified electrician se kaam karwayein.";
+
+    }
+
+    else if(n.includes("website")){
+
+        text=
+        "Simple personal/service website, links aur basic HTML related help.";
+
+        steps=
+        "Text, social links aur required services share karein → website layout aur code tayar kiya ja sakta hai.";
+
+    }
+
+    else{
+
+        text=
+        "Is service ke liye basic online/mobile guidance available hai.";
+
+        steps=
+        "Apni requirement WhatsApp par detail mein bhej dein. Available process ke mutabiq guide kiya jayega.";
+
+    }
+
+    document.getElementById("solText")
+        .textContent=text;
+
+    document.getElementById("solSteps")
+        .innerHTML=steps;
+
+    const message=
+        "Assalamualaikum Abdul Hadi! Mujhe \""+
+        name+
+        "\" ke bare mein help chahiye.";
+
+    document.getElementById("waService").href=
+        "https://wa.me/923217044963?text="+
+        encodeURIComponent(message);
+
+    document.getElementById("serviceModal")
+        .classList.add("show");
+}
+
+function closeService(){
+
+    document.getElementById("serviceModal")
+        .classList.remove("show");
+}
+
+
+/* GAMES */
+
+const gameModal=
+    document.getElementById("gameModal");
+
+const gameArea=
+    document.getElementById("gameArea");
+
+function openGame(game){
+
+    gameModal.classList.add("show");
+
+    if(game==="ttt")ticTacToe();
+    if(game==="rps")rockPaper();
+    if(game==="guess")numberGuess();
+    if(game==="memory")memoryGame();
+    if(game==="tap")tapGame();
+    if(game==="math")mathGame();
+    if(game==="coin")coinGame();
+    if(game==="dice")diceGame();
+    if(game==="reaction")reactionGame();
+    if(game==="lucky")luckyGame();
+}
+
+function closeGame(){
+
+    gameModal.classList.remove("show");
+
+    gameArea.innerHTML="";
+}
+
+
+/* TIC TAC TOE */
+
+function ticTacToe(){
+
+    document.getElementById("gameIcon")
+        .textContent="❌⭕";
+
+    document.getElementById("gameTitle")
+        .textContent="Tic Tac Toe";
+
+    gameArea.innerHTML=`
+
+        <div class="game-result" id="tttResult">
+            Player X ki turn
+        </div>
+
+        <div class="ttt" id="tttBoard"></div>
+
+        <button class="game-btn" onclick="ticTacToe()">
+            🔄 New Game
+        </button>
+    `;
+
+    let board=[
+        "","","",
+        "","","",
+        "","",""
+    ];
+
+    let player="X";
+    let gameOver=false;
+
+    const boardEl=
+        document.getElementById("tttBoard");
+
+    board.forEach((_,i)=>{
+
+        const cell=
+            document.createElement("button");
+
+        cell.className="ttt-cell";
+
+        cell.onclick=()=>{
+
+            if(board[i] || gameOver)return;
+
+            board[i]=player;
+            cell.textContent=player;
+
+            const winner=
+                checkWinner(board);
+
+            if(winner){
+
+                document.getElementById("tttResult")
+                    .textContent=
+                    "🎉 Player "+winner+" wins!";
+
+                gameOver=true;
+                return;
+            }
+
+            if(board.every(x=>x)){
+
+                document.getElementById("tttResult")
+                    .textContent="🤝 Draw!";
+
+                gameOver=true;
+                return;
+            }
+
+            player=
+                player==="X"?"O":"X";
+
+            document.getElementById("tttResult")
+                .textContent=
+                "Player "+player+" ki turn";
+        };
+
+        boardEl.appendChild(cell);
+
+    });
+}
+
+function checkWinner(b){
+
+    const wins=[
+        [0,1,2],
+        [3,4,5],
+        [6,7,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
+        [0,4,8],
+        [2,4,6]
+    ];
+
+    for(const w of wins){
+
+        if(
+            b[w[0]] &&
+            b[w[0]]===b[w[1]] &&
+            b[w[1]]===b[w[2]]
+        ){
+            return b[w[0]];
+        }
+    }
+
+    return null;
+}
+
+
+/* ROCK PAPER SCISSORS */
+
+function rockPaper(){
+
+    document.getElementById("gameIcon")
+        .textContent="✂️";
+
+    document.getElementById("gameTitle")
+        .textContent="Rock Paper Scissors";
+
+    gameArea.innerHTML=`
+
+        <div class="game-result" id="rpsResult">
+            Apna choice select karein
+        </div>
+
+        <button class="game-btn"
+        onclick="playRPS('Rock')">
+            🪨 Rock
+        </button>
+
+        <button class="game-btn"
+        onclick="playRPS('Paper')">
+            📄 Paper
+        </button>
+
+        <button class="game-btn"
+        onclick="playRPS('Scissors')">
+            ✂️ Scissors
+        </button>
+    `;
+}
+
+function playRPS(user){
+
+    const choices=[
+        "Rock",
+        "Paper",
+        "Scissors"
+    ];
+
+    const computer=
+        choices[
+            Math.floor(
+                Math.random()*3
+            )
+        ];
+
+    let result;
+
+    if(user===computer){
+
+        result="🤝 Draw";
+
+    }
+
+    else if(
+        (user==="Rock" && computer==="Scissors") ||
+        (user==="Paper" && computer==="Rock") ||
+        (user==="Scissors" && computer==="Paper")
+    ){
+
+        result="🎉 You Win!";
+
+    }
+
+    else{
+
+        result="😄 Computer Wins!";
+
+    }
+
+    document.getElementById("rpsResult")
+        .textContent=
+        "You: "+user+
+        " | Computer: "+computer+
+        " → "+result;
+}
+
+
+/* NUMBER GUESS */
+
+let secretNumber=0;
+
+function numberGuess(){
+
+    document.getElementById("gameIcon")
+        .textContent="🎯";
+
+    document.getElementById("gameTitle")
+        .textContent="Number Guess";
+
+    secretNumber=
+        Math.floor(
+            Math.random()*20
+        )+1;
+
+    gameArea.innerHTML=`
+
+        <div class="game-result"
+        id="guessResult">
+            1 se 20 ke darmiyan number guess karein.
+        </div>
+
+        <input
+            class="game-input"
+            id="guessInput"
+            type="number"
+            min="1"
+            max="20"
+            placeholder="Your guess"
+        >
+
+        <button class="game-btn"
+        onclick="checkGuess()">
+            Guess
+        </button>
+
+        <button class="game-btn"
+        onclick="numberGuess()">
+            🔄 New Number
+        </button>
+    `;
+}
+
+function checkGuess(){
+
+    const value=
+        Number(
+            document.getElementById("guessInput").value
+        );
+
+    const result=
+        document.getElementById("guessResult");
+
+    if(!value){
+
+        result.textContent=
+            "Number enter karein.";
+
+    }
+
+    else if(value===secretNumber){
+
+        result.textContent=
+            "🎉 Correct! You got it!";
+
+    }
+
+    else if(value<secretNumber){
+
+        result.textContent=
+            "⬆️ Thora bara number.";
+
+    }
+
+    else{
+
+        result.textContent=
+            "⬇️ Thora chota number.";
+
+    }
+}
+
+
+/* MEMORY */
+
+function memoryGame(){
+
+    document.getElementById("gameIcon")
+        .textContent="🧠";
+
+    document.getElementById("gameTitle")
+        .textContent="Memory Match";
+
+    const icons=[
+        "🍎","🍎",
+        "🚗","🚗",
+        "⭐","⭐",
+        "🎮","🎮"
+    ];
+
+    icons.sort(
+        ()=>Math.random()-.5
+    );
+
+    gameArea.innerHTML=`
+
+        <div class="game-result"
+        id="memoryResult">
+            Same pairs find karein!
+        </div>
+
+        <div
+            class="memory"
+            id="memoryBoard">
+        </div>
+
+        <button class="game-btn"
+        onclick="memoryGame()">
+            🔄 New Game
+        </button>
+    `;
+
+    const board=
+        document.getElementById("memoryBoard");
+
+    let first=null;
+    let second=null;
+    let lock=false;
+    let matched=0;
+
+    icons.forEach(icon=>{
+
+        const card=
+            document.createElement("button");
+
+        card.className="memory-card";
+
+        card.textContent="❓";
+
+        card.onclick=()=>{
+
+            if(
+                lock ||
+                card===first ||
+                card.dataset.done
+            )return;
+
+            card.textContent=icon;
+
+            if(!first){
+
+                first=card;
+                return;
+            }
+
+            second=card;
+            lock=true;
+
+            if(
+                first.textContent===
+                second.textContent
+            ){
+
+                first.dataset.done="1";
+                second.dataset.done="1";
+
+                matched+=2;
+
+                first=null;
+                second=null;
+                lock=false;
+
+                if(
+                    matched===icons.length
+                ){
+
+                    document
+                    .getElementById("memoryResult")
+                    .textContent=
+                    "🎉 All pairs found!";
+                }
+
+            }
+
+            else{
+
+                setTimeout(()=>{
+
+                    first.textContent="❓";
+                    second.textContent="❓";
+
+                    first=null;
+                    second=null;
+                    lock=false;
+
+                },650);
+            }
+
+        };
+
+        board.appendChild(card);
+
+    });
+}
+
+
+/* TAP COUNTER */
+
+function tapGame(){
+
+    document.getElementById("gameIcon")
+        .textContent="👆";
+
+    document.getElementById("gameTitle")
+        .textContent="Tap Counter";
+
+    gameArea.innerHTML=`
+
+        <div class="game-result">
+            Jitni dafa tap karoge count utna barhega.
+        </div>
+
+        <div
+            class="tap-area"
+            id="tapArea"
+        >
+            <span id="tapCount">0</span>
+        </div>
+
+        <button
+            class="game-btn"
+            onclick="resetTap()"
+        >
+            🔄 Reset
+        </button>
+    `;
+
+    let count=0;
+
+    document.getElementById("tapArea")
+        .onclick=()=>{
+
+            count++;
+
+            document.getElementById("tapCount")
+                .textContent=count;
+        };
+}
+
+function resetTap(){
+
+    const count=
+        document.getElementById("tapCount");
+
+    if(count)
+        count.textContent="0";
+}
+
+
+/* QUICK MATH */
+
+let mathAnswer=0;
+
+function mathGame(){
+
+    document.getElementById("gameIcon")
+        .textContent="🧮";
+
+    document.getElementById("gameTitle")
+        .textContent="Quick Math";
+
+    const a=
+        Math.floor(
+            Math.random()*12
+        )+1;
+
+    const b=
+        Math.floor(
+            Math.random()*12
+        )+1;
+
+    mathAnswer=a+b;
+
+    gameArea.innerHTML=`
+
+        <div class="game-result">
+            ${a} + ${b} = ?
+        </div>
+
+        <input
+            class="game-input"
+            id="mathInput"
+            type="number"
+            placeholder="Answer"
+        >
+
+        <button class="game-btn"
+        onclick="checkMath()">
+            Check
+        </button>
+
+        <button class="game-btn"
+        onclick="mathGame()">
+            🔄 Next
+        </button>
+
+        <div
+            class="game-result"
+            id="mathResult">
+        </div>
+    `;
+}
+
+function checkMath(){
+
+    const value=
+        Number(
+            document.getElementById("mathInput").value
+        );
+
+    const result=
+        document.getElementById("mathResult");
+
+    if(value===mathAnswer){
+
+        result.textContent=
+            "🎉 Correct!";
+
+    }
+
+    else{
+
+        result.textContent=
+            "❌ Wrong! Correct answer: "+
+            mathAnswer;
+    }
+}
+
+
+/* COIN */
+
+function coinGame(){
+
+    document.getElementById("gameIcon")
+        .textContent="🪙";
+
+    document.getElementById("gameTitle")
+        .textContent="Coin Flip";
+
+    gameArea.innerHTML=`
+
+        <div
+            class="game-result"
+            id="coinResult"
+        >
+            Coin flip karein!
+        </div>
+
+        <button
+            class="game-btn"
+            onclick="flipCoin()"
+        >
+            🪙 Flip Coin
+        </button>
+    `;
+}
+
+function flipCoin(){
+
+    const result=
+        Math.random()<.5
+        ?"🪙 Heads!"
+        :"🪙 Tails!";
+
+    document.getElementById("coinResult")
+        .textContent=result;
+}
+
+
+/* DICE */
+
+function diceGame(){
+
+    document.getElementById("gameIcon")
+        .textContent="🎲";
+
+    document.getElementById("gameTitle")
+        .textContent="Dice Roll";
+
+    gameArea.innerHTML=`
+
+        <div
+            class="game-result"
+            id="diceResult"
+        >
+            Dice roll karein!
+        </div>
+
+        <button
+            class="game-btn"
+            onclick="rollDice()"
+        >
+            🎲 Roll Dice
+        </button>
+    `;
+}
+
+function rollDice(){
+
+    const number=
+        Math.floor(
+            Math.random()*6
+        )+1;
+
+    const faces=[
+        "⚀","⚁","⚂",
+        "⚃","⚄","⚅"
+    ];
+
+    document.getElementById("diceResult")
+        .textContent=
+        faces[number-1]+
+        " You rolled "+
+        number;
+}
+
+
+/* REACTION */
+
+let reactionStart=0;
+let reactionTimer=null;
+
+function reactionGame(){
+
+    document.getElementById("gameIcon")
+        .textContent="⚡";
+
+    document.getElementById("gameTitle")
+        .textContent="Reaction Test";
+
+    gameArea.innerHTML=`
+
+        <div
+            class="game-result"
+            id="reactionResult"
+        >
+            Start press karein, phir green hote hi tap karein.
+        </div>
+
+        <div
+            class="reaction-box"
+            id="reactionBox"
+            onclick="reactionClick()"
+        >
+            START
+        </div>
+
+        <button
+            class="game-btn"
+            onclick="startReaction()"
+        >
+            ▶ Start
+        </button>
+    `;
+}
+
+function startReaction(){
+
+    const box=
+        document.getElementById("reactionBox");
+
+    const result=
+        document.getElementById("reactionResult");
+
+    box.style.background="#171d2d";
+
+    box.textContent="Wait...";
+
+    result.textContent=
+        "Green hone ka wait karein...";
+
+    clearTimeout(reactionTimer);
+
+    reactionTimer=
+        setTimeout(()=>{
+
+            box.style.background="#16a34a";
+
+            box.textContent="TAP!";
+
+            reactionStart=Date.now();
+
+        },1000+Math.random()*2500);
+}
+
+function reactionClick(){
+
+    const box=
+        document.getElementById("reactionBox");
+
+    const result=
+        document.getElementById("reactionResult");
+
+    if(box.textContent==="TAP!"){
+
+        const time=
+            Date.now()-reactionStart;
+
+        result.textContent=
+            "⚡ Your reaction: "+
+            time+
+            " ms";
+
+        box.style.background="#171d2d";
+
+        box.textContent="Done";
+    }
+}
+
+
+/* LUCKY NUMBER */
+
+function luckyGame(){
+
+    document.getElementById("gameIcon")
+        .textContent="🍀";
+
+    document.getElementById("gameTitle")
+        .textContent="Lucky Number";
+
+    gameArea.innerHTML=`
+
+        <div
+            class="game-result"
+            id="luckyResult"
+        >
+            Apna lucky number generate karein!
+        </div>
+
+        <button
+            class="game-btn"
+            onclick="luckyNumber()"
+        >
+            🍀 Generate
+        </button>
+    `;
+}
+
+function luckyNumber(){
+
+    const number=
+        Math.floor(
+            Math.random()*100
+        )+1;
+
+    document.getElementById("luckyResult")
+        .textContent=
+        "🍀 Your Lucky Number is "+
+        number;
+}
+
+
+/* MODAL CLOSE */
+
+document.getElementById("serviceModal")
+.addEventListener("click",function(e){
+
+    if(e.target===this){
+        closeService();
+    }
+
+});
+
+document.getElementById("gameModal")
+.addEventListener("click",function(e){
+
+    if(e.target===this){
+        closeGame();
+    }
+
+});
+
+</script>
 
 </body>
 </html>
